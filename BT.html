@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Training HTML/CSS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="memu.css">
+    
+  </head>
+  <body>
+    <div>
+        <div id="menu">
+            <input type="checkbox" name="toggle" id="toggle" style="display:none">
+            <div class="message">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div style="position: relative">
+                <label for="toggle">
+                    <div class="arrow-down" style="position: absolute; top: 0px;"></div>
+                </label>
+            </div>
+            <div class="tab">
+                <div class="avatar">
+                    <input type="checkbox" name="avatar" id="avatar" style="display: none">
+                    <label for="avatar"> AVATAR</label>
+                </div>
+                <div class="profile">
+                    <input type="checkbox" name="profile" id="profile" style="display: none">
+                    <label for="profile"> PROFILE</label>
+                </div>
+            </div>
+
+            <div class="body-avatar" style="text-align: -webkit-center; color:white;">
+                <div style="width:50%; text-align: left; background-color: #9183d1; border-radius: 10px; margin: 15px; padding: 15px">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                
+                    <div style="width: fit-content; margin: auto; padding: 15px;">
+                        <label for="cars">Choose a car:</label>
+                        <select name="cars" id="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; justify-content: center; padding: 5px;">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label><br>
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label><br>
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label><br><br>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I have a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> I have a car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> I have a boat</label><br><br>
+                    </div>
+                    <div>
+                        <input id="text" type="text" name="text" style="width: 100%;">
+                    </div>
+                    <div style="width: fit-content; margin: auto;">
+                        <input id="button" type="text" onclick="myFunction()" value="Submit">
+                    </div>
+                </div>
+            </div>
+
+            
+                
+            <div class="body-profile" >
+                <div>
+                    <img src="images.jpeg" alt="img" >
+                </div>
+                <div>
+                    <input id="button" type="text" onclick="dataImport()" value="Choose file">
+                </div>
+            </div>
+
+            <div id="footer" style="width: 50%;margin: auto; ">
+                <input type="checkbox" name="toggle-footer" id="toggle-footer" style="display:none">
+                
+                <div style="position: relative; width: fit-content; margin: auto;">
+                    <label for="toggle-footer">
+                        <div class="arrow-up" style="position: absolute"></div>
+                    </label>
+                </div>
+                <div class="message1">
+                    <p style="margin: auto; text-align: center;">Copyrights Ann's</p>
+                </div>
+
+             </div>
+                
+
+             <script>
+                function myFunction() {
+                  alert(document.getElementById("text").value);
+                }
+            </script>
+            <script>
+                function dataImport() {
+                    let input = document.createElement('input');
+                    input.type = 'file';
+                    input.onchange = _ => {
+                                let files =   Array.from(input.files);
+                                console.log(files);
+                            };
+                    input.click();
+                }
+            </script>
+    </div>   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  
+
+  </html>
